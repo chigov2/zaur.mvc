@@ -15,5 +15,7 @@
 <br>
 <h4>Your name: ${param.employeeName}</h4>
 
+<h4>Your name: ${nameAttribute}</h4>
+
 </body>
 </html>
