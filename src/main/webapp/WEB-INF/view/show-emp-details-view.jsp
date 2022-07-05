@@ -13,9 +13,12 @@
 <body>
 <h2>Welcome!!!</h2>
 <br>
-<h4>Your name: ${param.employeeName}</h4>
-
-<h4>Your name: ${nameAttribute}</h4>
-
+<h4>Your name: ${employee.name}</h4>
+<br>
+<br>
+<h4>Your surname: ${employee.surname}</h4>
+<br>
+<br>
+<h4>Your salary: ${employee.salary}</h4>
 </body>
 </html>
