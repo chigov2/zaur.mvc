@@ -23,14 +23,21 @@
     Surname <form:input path="surname"/>
     <br>
     <br>
-<%--    Department <form:input path="department"/>--%>
-<%--    <br>--%>
-<%--    <br>--%>
     Salary <form:input path="salary"/>
     <br>
     <br>
-    <input type="submit" value="OK">
+    Department <form:select path="department">
 
+    <form:options items="${employee.departments}"/>
+
+</form:select>
+    <br>
+    <br>
+    <h3>        Witch car do you want?    </h3>
+
+    <form:radiobuttons path="carBrand" items="${employee.carBrands}"/>
+    <br>
+    <input type="submit" value="OK">
 
 </form:form>
 
