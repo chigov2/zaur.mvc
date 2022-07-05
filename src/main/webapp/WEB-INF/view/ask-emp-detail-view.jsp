@@ -16,7 +16,6 @@
 <br>
 
 <form:form action="showDetails" modelAttribute="employee">
-
     Name <form:input path="name"/>
     <br>
     <br>
@@ -28,21 +27,17 @@
     <br>
     Department <form:select path="department">
 
-    <form:options items="${employee.departments}"/>
+    <form:options items="${employee.departments}"/></form:select>
+    <br>
 
-</form:select>
-    <br>
-    <br>
+
     <h3>        Witch car do you want?    </h3>
-
     <form:radiobuttons path="carBrand" items="${employee.carBrands}"/>
+    <br>
+    <br>
 
-    <br>
-    <br>
     Foreign language(s):
-    
     <form:checkboxes path="languages" items="${employee.languageList}"/>
-
 
     <br>
     <input type="submit" value="OK">
