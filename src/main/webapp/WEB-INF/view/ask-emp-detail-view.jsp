@@ -36,6 +36,14 @@
     <h3>        Witch car do you want?    </h3>
 
     <form:radiobuttons path="carBrand" items="${employee.carBrands}"/>
+
+    <br>
+    <br>
+    Foreign language(s):
+    
+    <form:checkboxes path="languages" items="${employee.languageList}"/>
+
+
     <br>
     <input type="submit" value="OK">
 

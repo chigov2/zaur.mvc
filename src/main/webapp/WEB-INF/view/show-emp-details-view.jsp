@@ -1,11 +1,7 @@
-<%--
-  Created by IntelliJ IDEA.
-  User: Max2
-  Date: 05.07.2022
-  Time: 10:31
-  To change this template use File | Settings | File Templates.
---%>
-<%@ page contentType="text/html;charset=UTF-8" language="java" %>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+
+<%--<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>--%>
+<%--<%@ page contentType="text/html;charset=UTF-8" language="java" %>--%>
 <html>
 <head>
     <title>Details</title>
@@ -22,5 +18,18 @@
 <h4>Your department: ${employee.department}</h4>
 <br>
 <h4>Your car: ${employee.carBrand}</h4>
+<br>
+<h4>Languages:</h4>
+<ul>
+
+   <c:forEach var="lang" items="${employee.languages}">
+       <li>
+           ${lang}
+
+       </li>
+
+   </c:forEach>
+
+</ul>
 </body>
 </html>
