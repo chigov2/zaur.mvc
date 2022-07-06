@@ -2,11 +2,13 @@ package mvc;
 
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
+import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 
 import javax.servlet.http.HttpServletRequest;
+import javax.validation.Valid;
 
 @Controller
 @RequestMapping("/employee")
@@ -28,16 +30,16 @@ public class MyController {
     }
 
     @RequestMapping("/showDetails")
-    public String showEmpDetails(@ModelAttribute("employee") Employee employee) {
+    public String showEmpDetails(@Valid @ModelAttribute("employee") Employee employee,
+    BindingResult bindingResult) {
+//        System.out.println("Surname length" + employee.getSurname().length());
 
-        String name = employee.getName();
+        if (bindingResult.hasErrors()){
 
-        employee.setName("Mr. " + name);
+            return "ask-emp-detail-view";
+        }else{
 
-        String surname = employee.getSurname();
-
-        employee.setSurname(surname + " !");
-
-        return "show-emp-details-view";
+            return "show-emp-details-view";
+        }
     }
 }
