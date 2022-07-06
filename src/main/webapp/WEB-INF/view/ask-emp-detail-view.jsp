@@ -25,6 +25,7 @@
     <br>
     <br>
     Salary <form:input path="salary"/>
+    <form:errors path="salary"/>
     <br>
     <br>
     Department: <form:select path="department">
@@ -41,6 +42,15 @@
 
     <h3>Foreign language(s):</h3>
     <form:checkboxes path="languages" items="${employee.languageList}"/>
+    <br>
+    <br>
+    Phone Number: <form:input path="phoneNumber" placeholder="38-067-430-89-88"/>
+    <form:errors path="phoneNumber"/>
+    <br>
+    <br>
+    E-mail <form:input path="email"/>
+    <form:errors path="email"/>
+    <br>
 
     <br>
     <input type="submit" value="OK">

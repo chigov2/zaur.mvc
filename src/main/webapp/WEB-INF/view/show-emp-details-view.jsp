@@ -8,17 +8,17 @@
 </head>
 <body>
 <h2>Welcome!!!</h2>
-<br>
+
 <h4>Your name: ${employee.name}</h4>
-<br>
+
 <h4>Your surname: ${employee.surname}</h4>
-<br>
+
 <h4>Your salary: ${employee.salary}</h4>
-<br>
+
 <h4>Your department: ${employee.department}</h4>
-<br>
+
 <h4>Your car: ${employee.carBrand}</h4>
-<br>
+
 <h4>Languages:</h4>
 <ul>
 
@@ -27,7 +27,15 @@
            ${lang}
        </li>
    </c:forEach>
-
 </ul>
+
+<h3>
+    Phone Number:  ${employee.phoneNumber}
+</h3>
+
+<h3>
+    E-mail:  ${employee.email}
+</h3>
+
 </body>
 </html>
